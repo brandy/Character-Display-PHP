@@ -26,7 +26,7 @@ class Controller {
 
     function __construct($debug = false) {
         if($debug != true) {
-            #header('Content-type: image/png');
+            header('Content-type: image/png');
             $this->image = ImageCreateTrueColor(96, 96);
             ImageSaveAlpha($this->image, true);
             ImageFill($this->image, 0, 0, ImageColorAllocateAlpha($this->image, 0, 0, 0, 127));
